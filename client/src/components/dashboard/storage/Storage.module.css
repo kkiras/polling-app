@@ -1,0 +1,153 @@
+/* Shared palette */
+:root {
+  --primary: #16697A;
+  --secondary: #489FB5;
+  --muted: #82C0CC;
+  --surface: #EDE7E3;
+  --accent: #FFA62B;
+  --white: #ffffff;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+.page {
+  /* max-width: 900px;
+  margin: 24px auto 48px;
+  padding: 0 16px; */
+  height: 100vh;
+  background-color: var(--surface);
+  display: flex;
+  justify-content: center;
+  /* Avoid stretching children vertically which can force flex items to shrink */
+  align-items: flex-start;
+  font-size: 16px;
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  background-color: white;
+  padding: 24px;
+  margin-top: 24px;
+  border-radius: 18px;
+}
+
+.heading {
+  color: var(--primary);
+  /* background: var(--surface); */
+  /* padding: 10px 12px; */
+  border-radius: 8px;
+  font-weight: 800;
+  margin: 0px 0px 32px 0px;
+
+}
+
+.card {
+  background: var(--white);
+  border: 2px solid var(--muted);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+  margin-bottom: 20px;
+  /* Prevent flex shrink when inside the column flex container */
+  flex: 0 0 auto;
+}
+
+.resultHeader {
+  background: var(--surface);
+  color: var(--primary);
+  font-weight: 800;
+  padding: 10px 14px;
+  border-bottom: 1px solid rgba(22,105,122,0.25);
+  font-size: 18px;
+}
+
+.cardHeaderSimple {
+  padding: 14px 18px;
+  border-bottom: 1px solid rgba(22,105,122,0.25);
+  background: linear-gradient(180deg, #f8fbfc, #ffffff);
+}
+
+.title {
+  color: var(--primary);
+  font-weight: 800;
+}
+
+.subtle {
+  color: var(--secondary);
+  opacity: 0.85;
+}
+
+.cardBody {
+  padding: 18px;
+}
+
+.question {
+  color: var(--primary);
+  font-weight: 800;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.metaRow {
+  display: flex;
+  gap: 18px;
+  color: var(--secondary);
+  font-weight: 600;
+  margin-bottom: 18px;
+}
+
+.results {
+  display: grid;
+  gap: 14px;
+}
+
+.resultRow {
+  display: grid;
+  grid-template-columns: 220px 1fr max-content;
+  align-items: center;
+  gap: 12px;
+}
+
+.resultLabel {
+  color: #24474f;
+  font-weight: 700;
+}
+
+.barWrap {
+  height: 10px;
+  background: #e7f0f2;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.barFill {
+  height: 100%;
+  background: var(--primary);
+  border-radius: 999px;
+}
+
+.barAccent {
+  background: var(--accent);
+}
+
+.resultMeta {
+  color: var(--secondary);
+  font-weight: 700;
+}
+
+.optionBox {
+  border: 2px solid var(--muted);
+  border-radius: 12px;
+  padding: 12px 14px;
+  color: #1f2a2e;
+  background: var(--white);
+  margin-bottom: 12px;
+}
+
+.optionSelected {
+  background: var(--surface);
+}

@@ -1,0 +1,45 @@
+._page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f7f7fa;
+}
+
+._panel {
+  width: 360px;
+  max-width: 92vw;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  border-radius: 10px;
+  background: #fff;
+  padding: 24px;
+}
+
+._title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+._muted {
+  color: #888;
+  font-size: 13px;
+  margin-bottom: 16px;
+}
+
+._actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+._switch {
+  margin-top: 12px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+._full {
+  width: 100%;
+}

@@ -1,0 +1,123 @@
+/* Palette reused for consistency */
+:root {
+  --primary: #16697A;
+  --secondary: #489FB5;
+  --muted: #82C0CC;
+  --surface: #EDE7E3;
+  --accent: #FFA62B;
+  --white: #ffffff;
+}
+
+.page {
+  /* max-width: 900px;
+  margin: 24px auto 48px;
+  padding: 0 16px; */
+    min-height: 100vh;
+    height: 100%;
+    background-color: var(--surface);
+    display: flex;
+    justify-content: center;
+}
+
+.inner {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.heading {
+  color: var(--primary);
+  background: var(--surface);
+  padding: 10px 12px;
+  border-radius: 8px;
+  font-weight: 800;
+  margin-bottom: 16px;
+}
+
+.card {
+  background: var(--white);
+  border: 2px solid var(--muted);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+}
+
+.cardHeader {
+  padding: 14px 18px;
+  border-bottom: 1px solid rgba(22,105,122,0.25);
+  background: linear-gradient(180deg, #f8fbfc, #ffffff);
+}
+
+.title {
+  color: var(--primary);
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+
+.subtle {
+  color: var(--secondary);
+  font-weight: 600;
+  opacity: 0.8;
+}
+
+.cardBody {
+  padding: 12px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.optionContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.optionBox {
+  border: 2px solid var(--muted);
+  border-radius: 12px;
+  padding: 12px 14px;
+  color: #1f2a2e;
+  background: var(--white);
+}
+
+.optionBox:hover {
+  background: var(--surface);
+}
+
+.optionSelected {
+  background: var(--surface);
+}
+
+.voteText {
+  align-self: flex-end;
+  color: var(--secondary);
+  display: flex;
+  justify-content: start;
+  gap: 4px;
+}
+
+.voteText > span {
+  color: var(--secondary)
+}
+
+.cardFooter {
+  display: grid;
+  grid-template-columns: repeat(3, max-content);
+  gap: 24px;
+  align-items: center;
+  padding: 12px 18px;
+  border-top: 1px solid rgba(22,105,122,0.25);
+  color: var(--primary);
+}
+
+.footerItem {
+  opacity: 0.9;
+  cursor: default;
+  align-self: flex-end;
+  color: var(--secondary);
+  display: flex;
+  justify-content: start;
+  gap: 4px;
+}
+
