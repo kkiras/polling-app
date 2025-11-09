@@ -9,6 +9,7 @@ dotenv.config();
 const PORT = process.env.PORT || 5000;
 const MONGO_URI = process.env.MONGO_URI;
 const JWT_SECRET = process.env.JWT_SECRET;
+const DB_NAME = process.env.MONGODB_DB_NAME
 
 if (!MONGO_URI) {
   console.error('Missing MONGO_URI in .env');
@@ -20,7 +21,7 @@ if (!JWT_SECRET) {
 }
 
 mongoose
-  .connect(MONGO_URI, { dbName: undefined })
+  .connect(MONGO_URI, { dbName: DB_NAME })
   .then(() => console.log('Mongo connected'))
   .catch((err) => {
     console.error('Mongo connection error', err);

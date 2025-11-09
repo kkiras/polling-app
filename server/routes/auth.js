@@ -67,7 +67,7 @@ router.post('/forgot-password', forgotPasswordLimiter, async (req, res) => {
     user.resetPassword = { tokenHash, expiresAt, usedAt: null, attempts: 0 };
     await user.save();
 
-    const base = process.env.FRONTEND_BASE_URL || 'http://localhost:5173';
+    const base = process.env.CLIENT_BASE_URL || 'http://localhost:5173';
     const resetUrl = `${base}/reset-password?uid=${user._id}&token=${token}`;
     try {
       await sendResetEmail(user.email, resetUrl);
