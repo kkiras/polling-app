@@ -47,7 +47,7 @@ const Login = () => {
       // Save token for later API calls
       localStorage.setItem('auth_token', data.token)
       if (data.uid) localStorage.setItem('auth_uid', data.uid)
-      navigate('/create')
+      navigate('/dashboard/create')
     } catch (err) {
       const msg = err?.response?.data?.message || 'Đăng nhập thất bại'
       toaster.push(<Message type="error">{msg}</Message>, { duration: 4000 })

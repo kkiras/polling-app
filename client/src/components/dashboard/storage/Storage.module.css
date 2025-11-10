@@ -16,23 +16,18 @@
   /* max-width: 900px;
   margin: 24px auto 48px;
   padding: 0 16px; */
-  height: 100vh;
+  min-height: 100vh;
+  height: 100%;
   background-color: var(--surface);
   display: flex;
   justify-content: center;
-  /* Avoid stretching children vertically which can force flex items to shrink */
-  align-items: flex-start;
-  font-size: 16px;
+  overflow-y: scroll;
 }
 
 .inner {
-  display: flex;
-  flex-direction: column;
-  width: 60%;
-  background-color: white;
-  padding: 24px;
-  margin-top: 24px;
-  border-radius: 18px;
+    display: flex;
+    flex-direction: column;
+    width: 60%;
 }
 
 .heading {
@@ -43,6 +38,13 @@
   font-weight: 800;
   margin: 0px 0px 32px 0px;
 
+}
+
+.pollsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: 24px 0;
 }
 
 .card {
@@ -77,12 +79,22 @@
 }
 
 .subtle {
-  color: var(--secondary);
-  opacity: 0.85;
+  color: var(--secondary) !important;
+  font-weight: 600;
+  opacity: 0.8;
 }
 
 .cardBody {
-  padding: 18px;
+  padding: 12px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.optionContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
 .question {
@@ -92,12 +104,12 @@
   margin-bottom: 10px;
 }
 
-.metaRow {
-  display: flex;
-  gap: 18px;
+.voteText {
+  align-self: flex-end;
   color: var(--secondary);
-  font-weight: 600;
-  margin-bottom: 18px;
+  display: flex;
+  justify-content: start;
+  gap: 4px;
 }
 
 .results {
@@ -145,9 +157,34 @@
   padding: 12px 14px;
   color: #1f2a2e;
   background: var(--white);
-  margin-bottom: 12px;
 }
 
 .optionSelected {
   background: var(--surface);
+}
+
+.cardFooter {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+  align-items: center;
+
+  border-top: 1px solid rgba(22,105,122,0.25);
+  color: var(--primary);
+}
+
+.footerItem {
+  width: 100%;
+  opacity: 0.9;
+  cursor: default;
+  align-self: flex-end;
+  color: var(--secondary);
+  display: flex;
+  justify-content: center;
+  padding: 12px 18px;
+  gap: 4px;
+  transition: background-color 0.25s ease;
+}
+
+.footerItem:hover {
+  background-color: rgb(220, 220, 220);
 }

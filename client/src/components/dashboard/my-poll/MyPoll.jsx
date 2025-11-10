@@ -205,7 +205,7 @@ export default function MyPoll() {
                     ) : (
                       <div className={styles.cardBody}>
                         <div className={styles.subtle}>{new Date(poll.createdAt).toLocaleString()}</div>
-                        <div className={styles.optionContainer}>
+                        <div className={styles.optionContainer} >
                           {poll.options.map((opt, i) => (
                             <div
                               key={i}

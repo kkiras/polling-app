@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import Poll from './components/dashboard/poll/Poll'
 import Explore from './components/dashboard/explore/Explore'
 import Storage from './components/dashboard/storage/Storage'
@@ -11,11 +11,12 @@ const App = () => {
   return (
     <BrowserRouter>
       <Routes>
+        <Route path="/" element={<Navigate to="/login" replace />} />
         <Route path="/login" element={<Login />} />
         <Route path="/forgot-password" element={<Login />} />
         <Route path="/reset-password" element={<Login />} />
 
-        <Route path="/" element={<Dashboard />}>
+        <Route path="/dashboard/" element={<Dashboard />}>
           <Route index element={<Explore />} />
           <Route path="create" element={<Poll />} />
           <Route path="explore" element={<Explore />} />

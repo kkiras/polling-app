@@ -15,12 +15,12 @@ const Navigation = () => {
   }
   return (
     <nav className={styles.nav}>
-      <Link to="/" className={styles.brand}>Thăm Dò Ý Kiến</Link>
+      <Link to="/dashboard/create" className={styles.brand}>Thăm Dò Ý Kiến</Link>
       <div className={styles.linkContainer}>
         <ul className={styles.menu}>
           <li>
             <NavLink
-              to="/"
+              to="/dashboard"
               end
               className={({ isActive }) => `${styles.link} ${isActive ? styles.active : ''}`}
             >
@@ -29,7 +29,7 @@ const Navigation = () => {
           </li>
           <li>
             <NavLink
-              to="/create"
+              to="/dashboard/create"
               end
               className={({ isActive }) => `${styles.link} ${isActive ? styles.active : ''}`}
             >
@@ -38,7 +38,7 @@ const Navigation = () => {
           </li>
           <li>
             <NavLink
-              to="/own"
+              to="/dashboard/own"
               end
               className={({ isActive }) => `${styles.link} ${isActive ? styles.active : ''}`}
             >
@@ -47,7 +47,7 @@ const Navigation = () => {
           </li>
           <li>
             <NavLink
-              to="/explore"
+              to="/dashboard/explore"
               className={({ isActive }) => `${styles.link} ${isActive ? styles.active : ''}`}
             >
               Khám phá
@@ -55,7 +55,7 @@ const Navigation = () => {
           </li>
           <li>
             <NavLink
-              to="/storage"
+              to="/dashboard/storage"
               className={({ isActive }) => `${styles.link} ${isActive ? styles.active : ''}`}
             >
               Đã thích
