@@ -1,4 +1,6 @@
 /* Palette reused for consistency */
+*{box-sizing: border-box;}
+
 :root {
   --primary: #16697A;
   --secondary: #489FB5;
@@ -12,32 +14,35 @@
   /* max-width: 900px;
   margin: 24px auto 48px;
   padding: 0 16px; */
-    min-height: 100vh;
-    height: 100%;
-    background-color: var(--surface);
-    display: flex;
-    justify-content: center;
+  min-height: 100vh;
+  height: 100%;
+  background-color: var(--surface);
+  display: flex;
+  justify-content: center;
+  overflow-y: scroll;
 }
 
 .inner {
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 60%;
+
 }
 
 .pollsContainer {
   display: flex;
   flex-direction: column;
   gap: 18px;
+  padding: 24px 0;
 }
 
 .heading {
   color: var(--primary);
   background: var(--surface);
-  padding: 10px 12px;
+  padding: 24px 12px 0px 12px;
   border-radius: 8px;
   font-weight: 800;
-  margin-bottom: 16px;
+  /* margin-bottom: 16px; */
 }
 
 .card {
@@ -52,12 +57,17 @@
   padding: 14px 18px;
   border-bottom: 1px solid rgba(22,105,122,0.25);
   background: linear-gradient(180deg, #f8fbfc, #ffffff);
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between;
+  align-items: center; */
 }
 
 .title {
   color: var(--primary);
   font-weight: 800;
   margin-bottom: 6px;
+  /* width: 80%; */
 }
 
 .subtle {
@@ -109,21 +119,47 @@
 
 .cardFooter {
   display: grid;
-  grid-template-columns: repeat(3, max-content);
-  gap: 24px;
+  grid-template-columns: repeat(2, 1fr);
   align-items: center;
-  padding: 12px 18px;
+
   border-top: 1px solid rgba(22,105,122,0.25);
   color: var(--primary);
 }
 
+/* .cardFooter :nth-child(1){
+  justify-content: start;
+}
+
+.cardFooter :nth-child(2){
+  justify-content: center;
+}
+
+.cardFooter :nth-child(3){
+  justify-content: end;
+} */
+ 
+.cardFooter > :nth-child(1){
+  border-right: 1px solid rgba(22,105,122,0.175);
+}
+
+.cardFooter > :nth-child(2){
+  border-left: 1px solid rgba(22,105,122,0.175);
+}
+
 .footerItem {
+  width: 100%;
   opacity: 0.9;
   cursor: default;
   align-self: flex-end;
   color: var(--secondary);
   display: flex;
-  justify-content: start;
+  justify-content: center;
+  padding: 12px 18px;
   gap: 4px;
+  transition: background-color 0.25s ease;
+}
+
+.footerItem:hover {
+  background-color: rgb(220, 220, 220);
 }
 

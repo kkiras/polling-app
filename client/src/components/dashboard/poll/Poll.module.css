@@ -1,12 +1,5 @@
 /* Palette */
-:root {
-  --primary: #16697A;
-  --secondary: #489FB5;
-  --muted: #82C0CC;
-  --surface: #EDE7E3;
-  --accent: #FFA62B;
-  --white: #ffffff;
-}
+
 
 *{
     box-sizing: border-box;

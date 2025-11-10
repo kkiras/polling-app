@@ -6,57 +6,85 @@
 
 .nav {
   width: 220px;
-  height: 100vh;
+  min-height: 100vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: stretch;
   justify-content: flex-start;
-  padding: 16px 12px;
+  /* padding: 16px 12px; */
   background: var(--white);
   color: var(--primary);
   border-right: 1px solid rgba(22, 105, 122, 0.15);
-  position: fixed;
+  /* position: fixed;
   top: 0;
-  left: 0;
+  left: 0; */
+  position: relative;
 }
 
 .brand {
   font-weight: 700;
   font-size: 20px;
   color: var(--primary);
-  padding: 4px 8px;
+  padding: 16px 20px 4px 20px;
   border-radius: 8px;
 }
+
+
 
 .menu {
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  gap: 8px;
+  gap: 0px;
   list-style: none;
-  margin: 12px 0 0 0;
+  /* margin: 12px 0 0 0; */
+  margin-top: 24px;
   padding: 0;
 }
 
 .link {
+  width: 100%;
+  display: block;
   color: var(--primary);
   text-decoration: none;
   opacity: 0.85;
   font-weight: 500;
-  padding: 10px 12px;
-  border-radius: 10px;
+  padding: 10px 24px;
   transition: opacity 0.15s ease, background-color 0.15s ease, color 0.15s ease;
 }
 
 .link:hover {
   opacity: 1;
+  text-decoration: none;
+  color: var(--primary);
 }
 
 .active {
   background: var(--primary);
   color: var(--white) !important;
-  padding: 10px 12px;
-  border-radius: 10px;
+  padding: 10px 24px;
   opacity: 1;
   font-weight: 600;
+  text-decoration: none !important;
+}
+
+.logoutBtn {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  display: block;
+  color: var(--destructive);
+  text-decoration: none;
+  opacity: 0.85;
+  font-weight: 500;
+  padding: 10px 24px;
+  transition: opacity 0.15s ease, background-color 0.15s ease, color 0.15s ease;
+  border-radius: 0px;
+}
+
+.logoutBtn:hover {
+  color: #fff !important;
+  background-color: var(--destructive) !important;
 }

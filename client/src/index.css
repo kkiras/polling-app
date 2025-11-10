@@ -1,5 +1,12 @@
 :root {
     font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --primary: #16697A;
+  --secondary: #489FB5;
+  --muted: #82C0CC;
+  --surface: #EDE7E3;
+  --accent: #FFA62B;
+  --white: #ffffff;
+  --destructive: #f44336;
 }
 /* :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
